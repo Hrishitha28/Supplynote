@@ -1,0 +1,15 @@
+<!-- app/templates/analytics.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Short Link Analytics</h2>
+    {% for short_link in user_short_links %}
+        <h3>{{ short_link.original_url }}</h3>
+        <ul>
+            {% for analytics_entry in short_link.analytics %}
+                <li>{{ analytics_entry.timestamp }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+    {% endfor %}
+{% endblock %}

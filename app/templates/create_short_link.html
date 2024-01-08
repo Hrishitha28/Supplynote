@@ -1,0 +1,13 @@
+<!-- app/templates/create_short_link.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Create Short Link</h2>
+    <form method="POST" action="{{ url_for('create_short_link') }}">
+        {{ form.hidden_tag() }}
+        {{ form.original_url.label }}
+        {{ form.original_url }}
+        <br>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+{% endblock %}

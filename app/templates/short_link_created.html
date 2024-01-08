@@ -1,0 +1,7 @@
+<!-- app/templates/short_link_created.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Short Link Created</h2>
+    <p>Your short link is: <a href="{{ url_for('short_link', short_code=short_link.short_code) }}">{{ url_for('short_link', short_code=short_link.short_code) }}</a></p>
+{% endblock %}
